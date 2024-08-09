@@ -12,15 +12,11 @@ public class Prova {
     public Prova(String aluno, List<String> questoes) {
         this.aluno = aluno;
         this.questoes = questoes;
-//        this.respostas = "9999";
-//        this.nota = 0.0;
+        this.respostas = "9999";
+        this.nota = 0.0;
     }
 
-    public void aplicarProva() {
-        for (int i = 0; i < questoes.size(); i++) {
-            System.out.println(i + 1 + ") " + questoes.get(i));
-        }
-    }
+    public void aplicarProva() {}
 
 
 

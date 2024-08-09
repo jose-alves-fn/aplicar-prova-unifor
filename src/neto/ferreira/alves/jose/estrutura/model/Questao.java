@@ -1,35 +1,29 @@
 package neto.ferreira.alves.jose.estrutura.model;
 
+import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 
-public class Questao {
-
-    private String enunciadoQuestao;
+class Questao {
+    private String pergunta;
     private List<String> alternativas;
-    private String gabarito;
+    private String respostaCorreta;
 
-    public Questao(String enunciadoQuestao, List<String> alternativas, String gabarito) {
-        this.enunciadoQuestao = enunciadoQuestao;
+    public Questao(String pergunta, List<String> alternativas, String respostaCorreta) {
+        this.pergunta = pergunta;
         this.alternativas = alternativas;
-        this.gabarito = gabarito;
+        this.respostaCorreta = respostaCorreta;
     }
 
-    public void infoQuestao(){
-        System.out.println("Enunciado:");
-        System.out.println(enunciadoQuestao + "\n");
-        System.out.println("Alternativas: ");
-        for (int i = 0; i < alternativas.size(); i++) {
-            System.out.println((char)('a' + i) + ") " + alternativas.get(i));
-        }
+    public String getPergunta() {
+        return pergunta;
     }
 
-    public void alternativaCorreta(String alternativa) {
-        if (Objects.equals(alternativa, alternativas.get(3))) {
-            System.out.println("\nAlernativa correta!");
-        } else
-            System.out.println("\nAlternativa incorreta");
+    public List<String> getAlternativas() {
+        return alternativas;
     }
 
+    public String getRespostaCorreta() {
+        return respostaCorreta;
+    }
 }
 

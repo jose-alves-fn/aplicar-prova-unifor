@@ -26,19 +26,21 @@ public class Principal {
 
 
         // Cadastro de alternativas das questoes
-        var questao_1 = new Questao("Qual das linguagens é uma linguagem fortemente tipada",
-                Arrays.asList("Python", "Java", "JavaScript", "PHP"), "b");
+        var questao_1 = new Questao("Qual das linguagens é uma linguagem fortemente tipada?",
+                Arrays.asList("Java", "Python", "JavaScript", "PHP"), "a");
 
-        var questao_2 = new Questao("Qual das linguagens é uma linguagem fortemente tipada",
-                Arrays.asList("MySQL", "PostgreSQL", "MongoDB", "Angular"), "b");
+        var questao_2 = new Questao("Qual das opções abaixo não é um SGBD?",
+                Arrays.asList("MySQL", "PostgreSQL", "MongoDB", "Angular"), "d");
 
+        var questao_3 = new Questao("O que é GIT?",
+                Arrays.asList("Um sistema operacional", "Um sistema de controle de versão distribuído",
+                        "Um editor de texto", "Um banco de dados relacional"), "b");
 
+        var questao_4 = new Questao("Qual das linguagens abaixo é muito usada em ciência de dados?",
+                Arrays.asList("JavaScript", "Python", "HTML", "CSS"), "b");
 
-
-
-
-
-
+        var questao_5 = new Questao("Qual das opções abaixo não é uma ameaça a segurança de sistemas computacionais?",
+                Arrays.asList("Malware", "Phishing", "Firewall", "Ransomware"), "c");
 
 
         // Cadastro dos itens da prova
