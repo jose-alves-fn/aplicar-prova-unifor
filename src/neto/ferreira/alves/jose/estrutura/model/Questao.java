@@ -3,7 +3,7 @@ package neto.ferreira.alves.jose.estrutura.model;
 import java.util.Arrays;
 import java.util.List;
 
-class Questao {
+public class Questao {
     private String pergunta;
     private List<String> alternativas;
     private String respostaCorreta;
