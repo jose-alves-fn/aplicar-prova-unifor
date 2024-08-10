@@ -1,6 +1,5 @@
 package neto.ferreira.alves.jose.estrutura.model;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class Questao {
@@ -26,4 +25,3 @@ public class Questao {
         return respostaCorreta;
     }
 }
-

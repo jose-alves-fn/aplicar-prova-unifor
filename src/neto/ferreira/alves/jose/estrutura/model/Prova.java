@@ -16,10 +16,9 @@ public class Prova {
         this.aluno = aluno;
         this.questoes = questoes;
         this.respostas = new ArrayList<>();
-        this.nota = 0.0;
     }
 
-    public void aplicarProva() {
+        public void aplicarProva() {
         for (int i = 0; i < questoes.size(); i++) {
             Questao questao = questoes.get(i);
             System.out.println("\n" + (i + 1) + ") " + questao.getPergunta() + "\n");
@@ -33,37 +32,36 @@ public class Prova {
         }
     }
 
-    public void verRespostas() {
+        public void verRespostas() {
         System.out.println("\n**************************\n");
         System.out.println("Respostas do aluno aos itens: \n");
         System.out.println(respostas);
     }
 
-    public void corrigirTeste() {
+        public void corrigirItens() {
         System.out.println("\n**************************\n");
         System.out.println("Correção dos itens: \n");
         for (int i = 0; i < questoes.size(); i++) {
             if (Objects.equals(respostas.get(i), questoes.get(i).getRespostaCorreta())) {
                 System.out.println("Questão " + (i + 1) + ": correta!");
-                nota += 2;
             } else {
                 System.out.println("Questão " + (i + 1) + ": incorreta!");
             }
         }
     }
 
-    public void mostrarNota() {
+        public void corrigirTeste() {
+        int totalCorretas = 0;
         System.out.println("\n**************************\n");
-        System.out.println("Nota do aluno: " + aluno + "\n");
-        System.out.println(nota);
+        for (int i = 0; i < questoes.size(); i++) {
+            if (questoes.get(i).getRespostaCorreta().equalsIgnoreCase(respostas.get(i))) {
+                totalCorretas++;
+            }
+        }
+        this.nota = (double) totalCorretas / questoes.size() * 10; // Nota em escala de 0 a 10
     }
 
-
-
+        public void mostrarNota() {
+        System.out.println("Nota do aluno " + aluno + ": " + nota);
+    }
 }
-
-
-
-
-
-
