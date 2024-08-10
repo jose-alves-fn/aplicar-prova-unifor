@@ -38,7 +38,9 @@ public class Principal {
 
 
         prova.aplicarProva();
-
+        prova.verRespostas();
+        prova.corrigirTeste();
+        prova.mostrarNota();
 
     }
 }
